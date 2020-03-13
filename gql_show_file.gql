@@ -1,0 +1,207 @@
+query($storeSlugs: [String!]) {
+  modules(storeSlugs: $storeSlugs) {
+    list {
+      id
+      type
+      name
+      template
+      bundleID
+      storeSlug
+      parentBundleID
+      bindTableInfo {
+        database
+        viewTableName
+        dataTableName
+      }
+      appBundleID
+      featureFlags {
+        crossChain
+        globalEntry
+        inheritance
+        anonymous
+        preCondition
+        settingEntry
+        i18nEntry
+        readOnly
+      }
+      preConditions {
+        name
+        uuid
+        type
+        roles
+        formulas {
+          formula
+        }
+        viewIDs
+      }
+      uniqueIndexes {
+        uuid
+        fields
+      }
+      moduleMenu {
+        id
+        parentID
+        storeID
+        parentID
+        storeSlug
+        name
+        type
+        moduleBundleID
+        appBundleID
+        wikiID
+        position
+        hidden
+        i18n
+        embeddedConfig {
+          embedType
+          embedValue
+        }
+        createdAt
+        updatedAt
+        deletedAt
+      }
+      moduleFields {
+        uuid
+        moduleBundleID
+        appBundleID
+        storeID
+        storeSlug
+        label
+        name
+        dataType
+        viewType
+        defaultValue
+        refreshFields
+        preCondition
+        postCondition
+        i18n
+        featureFlags {
+          multiValue
+          readOnly
+          required
+          bindField
+          defaultValue
+          bindMiddlewareTable
+          preCondition
+          quickSearch
+          bulkSearch
+          postCondition
+          renderEntry
+        }
+        allowValue {
+          items {
+            uuid
+            key
+            value
+            formula
+          }
+        }
+        multiValueConfig {
+          formatter {
+            type
+            content
+          }
+          miniLength
+          maxLength
+        }
+        generateConfig {
+          format
+        }
+        listenConfig {
+          type
+          formula
+          staticValue
+          formulaType
+        }
+        validations {
+          uuid
+          name
+          formula
+          formulaType
+          validationErrorMessage
+        }
+        relation {
+          relatedModuleBundleID
+          valueField
+          displayField
+          maxRecords
+          fieldMapping {
+            uuid
+            field
+            relatedField
+          }
+          middlewareTableConfig {
+            database
+            middleTableName
+            middleMainFieldName
+            middleRelateFieldName
+          }
+          searchConfig {
+            quickSearchConfig {
+              directSearchScript
+              fuzzySearchScript
+              actionScript
+              directSearch
+              fuzzySearch
+              suggest
+            }
+            bulkSearchConfig {
+              searchModuleBundleID
+              editFields
+              searchScript
+              actionScript
+            }
+          }
+          exportFieldMapping {
+            uuid
+            fromField
+            destField
+          }
+        }
+        dateFormat
+        renderConfig {
+          template
+        }
+        delegationConfig {
+          currentField
+          relatedField
+        }
+        active
+      }
+      viewTemplates {
+        appBundleID
+        moduleBundleID
+        bundleID
+        name
+        templateType
+        template
+        defaultEntry
+      }
+      actions {
+        id
+        uuid
+        storeSlug
+        storeID
+        moduleBundleID
+        name
+        scriptIDs
+        visibilityCondition
+        i18n
+        createdAt
+        updatedAt
+        deletedAt
+      }
+      i18n
+      createdAt
+      updatedAt
+      deletedAt
+    }
+    pageInfo {
+      total
+      pageSize
+      totalPages
+      current
+      totalGroupByStores
+    }
+  }
+}

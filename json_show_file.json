@@ -1,0 +1,26 @@
+[
+  {
+    "qty_requested": "1",
+    "display_unit_id": null,
+    "in_transit": "1",
+    "state": "pending",
+    "cost_in_display_unit": null,
+    "qty_received": null,
+    "total_cost": "0",
+    "name": "",
+    "created_at": null,
+    "price": null,
+    "updated_at": null
+  },
+
+  {
+    "cost_in_display_unit": null,
+    "in_transit": "1",
+    "name": "",
+    "qty_received": null,
+    "qty_requested": "1",
+    "state": "pending",
+    "total_cost": "0"
+  }
+]
+$.path.source_id.default_purchase_order_unit_id.id
